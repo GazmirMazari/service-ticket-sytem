@@ -2,13 +2,6 @@
   <section class='dashboard'>
     <!-- Page Title Header Starts-->
     <div class="proBanner">
-      <div>
-        <span class="d-flex align-items-center purchase-popup">
-          <p>Get tons of UI components, Plugins, multiple layouts, 20+ sample pages, and more!</p>
-          <a href="https://www.bootstrapdash.com/product/star-admin-pro-vue/?utm_source=organic&utm_medium=banner&utm_campaign=free-preview" rel="noopener noreferrer" target="_blank" class="btn btn-sm purchase-button ml-auto">Check Pro Version</a>
-          <i class="mdi mdi-close bannerClose"  @click="toggleProBanner()" onClick={this.toggleProBanner}></i>
-        </span>
-      </div>
     </div>
     <div class='row page-title-header'>
       <div class='col-12'>
@@ -16,7 +9,6 @@
           <h4 class='page-title'>Dashboard</h4>
           <div class='quick-link-wrapper w-100 d-md-flex flex-md-wrap'>
             <ul class='quick-links'>
-              <li><a href='#'>ICE Market data</a></li>
               <li><a href='#'>Own analysis</a></li>
               <li><a href='#'>Historic market data</a></li>
             </ul>
@@ -64,8 +56,8 @@
                 <div class='d-flex'>
                   <div class='wrapper'>
                     <h3 class='mb-0 font-weight-semibold'>32,451</h3>
-                    <h5 class='mb-0 font-weight-medium text-primary'>Visits</h5>
-                    <p class='mb-0 text-muted'>+14.00(+0.50%)</p>
+                    <h5 class='mb-0 font-weight-medium text-primary'>Total Calls</h5>
+                    <p class='mb-0 text-muted'>+14.00(+0.50%)</p>  <!-- Call a function-->
                   </div>
                   <div class='wrapper my-auto ml-auto ml-lg-4'>
                     <stats-line-graph-1 :height="50" :width="100"></stats-line-graph-1>
@@ -76,7 +68,7 @@
                 <div class='d-flex'>
                   <div class='wrapper'>
                     <h3 class='mb-0 font-weight-semibold'>15,236</h3>
-                    <h5 class='mb-0 font-weight-medium text-primary'>Impressions</h5>
+                    <h5 class='mb-0 font-weight-medium text-primary'>Open Calls</h5>
                     <p class='mb-0 text-muted'>+138.97(+0.54%)</p>
                   </div>
                   <div class='wrapper my-auto ml-auto ml-lg-4'>
@@ -88,7 +80,7 @@
                 <div class='d-flex'>
                   <div class='wrapper'>
                     <h3 class='mb-0 font-weight-semibold'>7,688</h3>
-                    <h5 class='mb-0 font-weight-medium text-primary'>Conversation</h5>
+                    <h5 class='mb-0 font-weight-medium text-primary'>SLA Flags</h5>
                     <p class='mb-0 text-muted'>+57.62(+0.76%)</p>
                   </div>
                   <div class='wrapper my-auto ml-auto ml-lg-4'>
@@ -100,7 +92,7 @@
                 <div class='d-flex'>
                   <div class='wrapper'>
                     <h3 class='mb-0 font-weight-semibold'>1,553</h3>
-                    <h5 class='mb-0 font-weight-medium text-primary'>Downloads</h5>
+                    <h5 class='mb-0 font-weight-medium text-primary'>Closed</h5>
                     <p class='mb-0 text-muted'>+138.97(+0.54%)</p>
                   </div>
                   <div class='wrapper my-auto ml-auto ml-lg-4'>
@@ -117,7 +109,7 @@
       <div class='col-md-8 grid-margin stretch-card'>
         <div class='card'>
           <div class='card-body'>
-            <h4 class='card-title mb-0'>Sales Statistics Overview</h4>
+            <h4 class='card-title mb-0'>Ticket Volume</h4>
             <div class='d-flex flex-column flex-lg-row'>
               <p>Lorem ipsum is placeholder text commonly used</p>
               <ul class='nav nav-tabs sales-mini-tabs ml-lg-auto mb-4 mb-md-0' role='tablist'>
@@ -162,11 +154,11 @@
         <div class='card'>
           <div class='card-body d-flex flex-column'>
             <div class='wrapper'>
-              <h4 class='card-title mb-0'>Net Profit Margin</h4>
-              <p>Started collecting data from February 2019</p>
-              <div class='mb-4' id='net-profit-legend'><div class='chartjs-legend'><ul><li><span style='background-color:rgba(88, 208, 222,0.8)'></span>Sales</li><li><span style='background-color:rgba(150, 77, 247,1)'></span>Orders</li></ul></div></div>
+              <h4 class='card-title mb-0'>Ticket Distribution</h4>
+              <p>Distribution per Lane</p>
+              <div class='mb-4' id='ticket-distribution'><div class='chartjs-legend'><ul><li><span style='background-color:rgba(88, 208, 222,0.8)'></span>Hardware</li><li><span style='background-color:rgba(150, 77, 247,1)'></span>Software</li></ul></div></div>
             </div>
-            <net-Profit class='my-auto mx-auto w-100' :height="300"></net-Profit>
+            <ticket-distribution class='my-auto mx-auto w-100' :height="300"></ticket-distribution>
           </div>
         </div>
       </div>
@@ -586,7 +578,7 @@ import statsLineGraph2 from '../components/charts/dashboard_1/stats-line-graph-2
 import statsLineGraph3 from '../components/charts/dashboard_1/stats-line-graph-3'
 import statsLineGraph4 from '../components/charts/dashboard_1/stats-line-graph-4'
 import salesStatisticsOverview from '../components/charts/dashboard_1/sales-statistics-overview'
-import netProfit from '../components/charts/dashboard_1/net-Profit'
+import ticketDistribution from '../components/charts/dashboard_1/ticket-distribution'
 import totalRevenue from '../components/charts/dashboard_1/total-revenue'
 import marketOverviewChart from '../components/charts/dashboard_1/market-overview-chart'
 import totalTransaction from '../components/charts/dashboard_1/total-transaction'
@@ -602,7 +594,7 @@ export default {
     statsLineGraph3,
     statsLineGraph4,
     salesStatisticsOverview,
-    netProfit,
+    ticketDistribution,
     totalRevenue,
     marketOverviewChart,
     totalTransaction,

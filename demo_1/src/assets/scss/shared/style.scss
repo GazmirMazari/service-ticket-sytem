@@ -16,7 +16,7 @@
 /*-------------------------------------------------------------------*/
 /* === Import template variables === */
 @import "variables";
-@import "../demo_1/variables";
+@import "../css/variables";
 
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
@@ -52,7 +52,6 @@
 @import "functions";
 @import "typography";
 @import "utilities";
-@import "demo";
 @import "dashboard";
 @import "widgets";
 
@@ -84,25 +83,18 @@
 @import "components/timeline";
 @import "components/product-tile";
 @import "components/chat";
-@import "../demo_1/card";
-@import "../demo_1/dashboard";
-@import "../demo_1/footer";
-@import "../demo_1/nav";
-@import "../demo_1/navbar";
-@import "../demo_1/sidebar";
-@import "../demo_1/misc";
-@import "../demo_1/layouts";
+@import "../css/dashboard";
+@import "../css/footer";
+@import "../css/nav";
+@import "../css/navbar";
+@import "../css/sidebar";
+@import "../css/misc";
+@import "../css/layouts";
 @import "components/plugin-overrides/full-calendar";
 @import "components/plugin-overrides/date-picker";
 @import "components/plugin-overrides/snotify";
 @import "components/plugin-overrides/chartjs";
 
-/*-------------------------------------------------------------------*/
-/* === Landing screens === */
-@import "screens/auth";
-@import "screens/error";
-@import "screens/profile-page";
-@import "screens/invoice";
 
 @import "components/mail-components/mail-list-container";
 @import "components/mail-components/mail-sidebar";
